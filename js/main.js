@@ -12,7 +12,7 @@ ko.bindingHandlers.googlemap = {
         var
             value = valueAccessor(),
             mapOptions = {
-                zoom: 16,
+                zoom: 18,
                 center: new google.maps.LatLng(value.centerLat, value.centerLon),
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
