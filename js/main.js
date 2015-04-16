@@ -63,7 +63,7 @@ function Pin(map, title, lat, long, dist) {
         map: map
     });
 
-    var contentString = 'This is the ' + this.lat() + ' longitude and ' + this.long() + ' is the longitude and the name of this place is the  ' + this.name() + ' and  ' + this.dist() + ' distance';
+    var contentString = 'This is the ' + this.lat() + ' longitude and ' + this.long() + ' is the longitude and the name of this place is the  ' + this.name() + ' and  ' + this.dist() + ' is the distance from Wikimedia Foundation';
 
 
     google.maps.event.addListener(marker, 'click', function () {
