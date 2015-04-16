@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhZqXr9oC1bCn0XMC2Vv-ktvodrpniQMM">
+    </script>
+</head>
+<body>
+
+
+<input id="inputSearch" data-bind="value: query, valueUpdate: 'keyup'" class="input-controls-for-gmaps" type="text"
+       placeholder="Search by name">
+
+<div class="map" data-bind="googlemap: { locations: items, centerLat: 37.78697, centerLon: -122.399677 }">
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
