@@ -2,6 +2,12 @@
 
 ##It's still kind of a work in progress, I wanted to add more functionality, i'll come back to it, but it is the requirements to move on from this project.
 
+###Direction's to use.
+
+* Go to http://toklok.github.io and start interacting with my simple app, demonstrating [Google Maps](https://developers.google.com/maps/documentation/javascript/), and [Knockout](http://knockoutjs.com)
+
+I also added functionality for a mobile application.
+
 This project was created to go with JavaScript Design Patterns from Udacity, it covers all the requirments for this course.
 
 This project was fun and a lot of work for someone who had to read A LOT of documentation, Google Maps was an API I had to learn and Wikimedia's geo-search API, along with Knockout.JS documentation.   

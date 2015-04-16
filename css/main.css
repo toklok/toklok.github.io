@@ -15,3 +15,59 @@ html, body, .map {
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     width: 400px;
+}
+
+a {color:red;}
+a:hover {color:#f1f1f1;}
+.infobox {
+    font-size: 2em;
+    background: none repeat scroll 0 0 #212121;
+    color: #F1F1F1;
+    font-family: arial;
+    line-height: 20px;
+    position: absolute;
+}
+.infobox:before, .infobox:after {
+    border-color: transparent transparent transparent #212121;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    bottom: -1px;
+    content: "";
+    display: block;
+    height: 0;
+    left: -1px;
+    position: absolute;
+    width: 0;
+    z-index:2
+}
+.infobox:after {
+    border-color: transparent transparent transparent #FFFFFF;
+    border-width:24px 24px 0;
+    z-index:1
+}
+.infobox .close {
+    background: none repeat scroll 0 0 #212121;
+    cursor: pointer;
+    float: right;
+    font-size: 17px;
+    height: 25px;
+    line-height: 22px;
+    position: relative;
+    right: -25px;
+    text-align: center;
+    top: 0;
+    width: 25px;
+}
+
+.infobox .content {
+    margin:15px 15px 15px 15px;
+}
+
+@media (max-width: 400px) {
+    .input-controls-for-gmaps {
+        overflow: hidden;
+    }
+}
+p {
+    font-size: 3em;
+}
