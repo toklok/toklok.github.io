@@ -14,7 +14,8 @@ html, body, .map {
     height: 32px;
     outline: none;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    width: 400px;
+    width: 25vh;
+    font-size: 4em;
 }
 
 a {color:red;}
@@ -63,9 +64,11 @@ a:hover {color:#f1f1f1;}
     margin:15px 15px 15px 15px;
 }
 
-@media (max-width: 400px) {
+@media (mix-width: 400px) {
     .input-controls-for-gmaps {
-        overflow: hidden;
+        font-size: 3em;
+        height: 15vh;
+        width: 100vh
     }
 }
 p {

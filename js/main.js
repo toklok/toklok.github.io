@@ -1,5 +1,11 @@
 var URL_CONST = 'https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gsradius=10000&gscoord=37.786971%7C-122.399677&gslimit=100&format=json';
 
+$(window).resize(function() {
+
+    google.maps.event.trigger(map, "resize");
+});
+
+
 ko.bindingHandlers.googlemap = {
 
     init: function (element, valueAccessor) {
@@ -17,7 +23,6 @@ ko.bindingHandlers.googlemap = {
 
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(inputForSearch);
 
-        infowindow = new google.maps.InfoWindow();
 
         getWiki();
     }
@@ -59,11 +64,10 @@ function Pin(map, title, lat, lng, dist) {
 
     marker = new google.maps.Marker({
         position: new google.maps.LatLng(this.lat(), this.lng()),
-        content: this.name(),
         map: map
     });
 
-    var contentString = 'This is the ' + this.lat() + ' longitude and ' + this.lng() + ' is the longitude and the name of this place is the  ' + this.name() + ' and  ' + this.dist() + ' is the distance from Wikimedia Foundation';
+    var contentString = '' + this.lat() + ' and' + this.lng() + '' + this.name() + ' and  ' + this.dist() + ' is the distance from Wikimedia Foundation';
 
 
     google.maps.event.addListener(marker, 'click', function (e) {
@@ -71,13 +75,10 @@ function Pin(map, title, lat, lng, dist) {
         var infoBox = new InfoBox({
             latlng: this.getPosition(),
             map: map,
-            content: this.content
+            content: contentString
     });
 
-    //infowindow.setContent(contentString);
-    //infowindow.open(map, marker);
-
-})
+});
 
 this.isVisible = ko.observable(false);
 
